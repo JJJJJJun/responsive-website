@@ -131,7 +131,7 @@
   
   /* Home */
   #home {
-    background: url(../imgs/Background.png) center/cover no-repeat;
+    background: url(../responsive-website/imgs/Background.png) center/cover no-repeat;
     padding: 40px;
     text-align: center;
   }
@@ -288,8 +288,8 @@
 
   .category__btn {
     border: 1px solid var(--color-dark-white);
-    border-radius: var{--size-border-radius};
-    font-size: var{--font-regular};
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
     padding: 8px 48px;
   }
 
@@ -301,14 +301,14 @@
 
   .category__count {
     background-color: var(--color-orange);
-    border-radiusL 58%;
+    border-radius: 50%;
     color: var(--color-white);
     width: 24px;
     height: 24px;
     display: inline-block;
     line-height: 24px;
     position: relative;
-    top: -28px;
+    top: -20px;
     left: 4px;
     transition: all var(--animation-duration) ease-in;
     opacity: 0;
@@ -422,7 +422,7 @@
 
 /* Contact */
 #contact {
-  background-color: pink;
+  background-color:var(--color-pink);
 }
 
 .contact__title, .contact__email, .contact__rights {
@@ -440,6 +440,6 @@
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color:var(--color-yellow);
+  color: var(--color-yellow);
   transition: all var(--animation-duration) ease-in;
 }
