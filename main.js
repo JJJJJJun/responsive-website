@@ -20,23 +20,27 @@ navbarMenu.addEventListener("click", (event) => {
     if (link == null) {
         return;
     }
+    navbarMenu.classList.remove("open");
     scrollIntoView(link);
 });
-
-/*const homeContact = document.querySelector(".home__contact");
-homeContact.addEventListener("click", (event) => {
-    const target = event.target;
-    const link = target.dataset.link;
-    if (link == null) {
-        return;
-    }
-    scrollIntoView(link);
-});*/
 
 //contact me 버튼 이동하기
 const contactMeBtn = document.querySelector(".home__contact");
 contactMeBtn.addEventListener("click", () => {
     scrollIntoView("#contact");
+});
+
+//home 투명도 조절
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", ()=>{
+    home.style.opacity = 1 - window.scrollY/homeHeight;
+});
+
+//햄버거 메뉴 클릭 시 
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", ()=>{
+    navbarMenu.classList.toggle("open");
 });
 
 function scrollIntoView(selector) {
